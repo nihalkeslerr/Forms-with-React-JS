@@ -4,7 +4,14 @@ import Form from './Form';
 import { useState } from 'react';
 
 function Contacts() {
-  const [contacts,setContact] = useState([]);
+  const [contacts,setContact] = useState([{
+    fullname:"Nihal",
+    Phone_Number:12345
+  },
+  {
+    fullname:"Kerem",
+    Phone_Number:987
+  }]);
 
   useEffect(()=>{
     console.log("contact: ",contacts);
