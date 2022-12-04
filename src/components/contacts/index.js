@@ -12,8 +12,8 @@ function Contacts() {
 
   return (
     <div>
-        Contact Sayfası
-        <List/> 
+        FORM PAGE
+        <List contact={contacts}/> 
         <Form addcontact={setContact} contact={contacts} />
          
     </div>

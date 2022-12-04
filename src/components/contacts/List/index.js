@@ -1,8 +1,19 @@
 import React from 'react'
 
-function List() {
+function List({contact}) {
   return (
-    <div>Contact list</div>
+    <div>
+        <ul>
+          {
+            contact.map((contact,i)=>(
+              <div>
+              <li key={i}>FULLNAME: {contact.fullname} PHONE NUMBER{contact.Phone_Number}</li>
+              </div>
+            ))
+          }
+        </ul>
+
+    </div>
   )
 }
 
