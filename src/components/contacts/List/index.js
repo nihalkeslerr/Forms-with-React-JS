@@ -14,22 +14,30 @@ function List({contact}) {
     )
 
   })
-  console.log("filtered: ",filtered);
+  //console.log("filtered: ",filtered);
 
   return (
 
     <div>
-      <input value={FilterText} placeholder='Filter' onChange={(e)=>{setFilterText(e.target.value)}}/>
-
-        <ul>
+      <p>*Person Who You Want to Filter*</p>
+      <input className='filter' value={FilterText} placeholder='Filter' onChange={(e)=>{setFilterText(e.target.value)}}/>
+      <br/>
+      <div className='infohead'>Information: </div>
+      <br/>
+        <ul className='list'>
           {
+            
             filtered.map((contact,i)=>(
-              <div>
-              <li key={i}>*Fullname: {contact.fullname}  *Phone Number: {contact.Phone_Number}</li>
+              <div key={i}>
+
+              <li key={i}>
+              <span>{contact.fullname}</span> 
+              <span>{contact.Phone_Number} </span>  </li>
               </div>
             ))
           }
         </ul>
+        <div>Total Contacts: ({filtered.length})</div>
 
     </div>
   )

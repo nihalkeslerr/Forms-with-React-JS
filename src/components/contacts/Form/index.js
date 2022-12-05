@@ -38,15 +38,17 @@ function Form({addcontact,contact}) {
     <div>
 
       <div>
-        <input value={form.fullname} onChange={onChangeInput} name='fullname' placeholder='FullName'/>
+      <p>*Name*</p>
+        <input className='info' value={form.fullname} onChange={onChangeInput} name='fullname' placeholder='FullName'/>
       </div>
 
       <div>
-        <input value={form.Phone_Number} onChange={onChangeInput} name='Phone_Number' placeholder='Phone Number' />
+      <p>*Phone Number*</p>
+        <input className='info' value={form.Phone_Number} onChange={onChangeInput} name='Phone_Number' placeholder='Phone Number' />
       </div>
 
       <div>
-        <button>ADD</button>
+        <button className='btn_add'>ADD</button>
       </div>
 
     </div>
